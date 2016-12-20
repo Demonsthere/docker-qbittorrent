@@ -14,4 +14,3 @@ ADD files/qBittorrent.conf /root/.config/qBittorrent/qBittorrent.conf
 
 WORKDIR /data
 ENTRYPOINT ["qbittorrent-nox"]
-CMD ["--help"]
