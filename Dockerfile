@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:stretch-slim
 
 MAINTAINER jakub.blaszczyk@sap.com
 ONBUILD RUN apt-get update --fix-missing
