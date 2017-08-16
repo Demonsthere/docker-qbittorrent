@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 
-MAINTAINER jakub.blaszczyk@sap.com
+MAINTAINER daemonsthere@gmail.com
 ONBUILD RUN apt-get update --fix-missing
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -11,6 +11,9 @@ VOLUME /data
 
 RUN apt-get update &&\
   apt-get install -y qbittorrent-nox &&\
+  apt-get -y autoremove &&\
+  apt-get -y clean &&\
+  rm -rf /var/lib/apt/lists/* &&\
   mkdir -p /root/.config/qBittorrent
 
 ADD files/qBittorrent.conf /root/.config/qBittorrent/qBittorrent.conf
