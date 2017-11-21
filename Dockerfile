@@ -1,4 +1,4 @@
-FROM armv7/armhf-ubuntu
+FROM arm32v7/debian:stretch-slim
 MAINTAINER daemonsthere@gmail.com
 
 ENV DEBIAN_FRONTEND noninteractive
